@@ -8,8 +8,9 @@ export default defineConfig({
   root: path.resolve(__dirname, 'frontend'),
   plugins: [
     react(),
-    babel({ presets: [reactCompilerPreset()] })
+    babel({ presets: [reactCompilerPreset()] }),
   ],
+  base: process.env.VITE_BASE_URL || "/Traffic-Base-Route-Guidance-System",
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./frontend/src"),
